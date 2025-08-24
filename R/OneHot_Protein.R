@@ -23,8 +23,13 @@ OneHot_Protein=function(data) {
     mtn[cbind(rows, cols)] <- 1
     check_mtn=apply(mtn,2,sum) #need to get rid of the columns with all 0's
     if (length(which(check_mtn==0))>0) mtn=mtn[,-which(check_mtn==0)]
+    if (dim(mtn)[2]>2) {
     mtn=mtn[,-1] #remove gaps
     Gsz[i]=dim(mtn)[2] #record the group size of each position
+    } else {
+      mtn=mtn[,-1] #remove gaps
+      Gsz[i]=1
+    }
     data1hot=cbind(data1hot,mtn)
   }
 
