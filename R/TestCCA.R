@@ -56,8 +56,8 @@ TestCCA=function(res1,res2){
     return(tail)
   }
 
-  res1=res1%*%sqrtm(as.matrix(S11))$Binv
-  res2=res2%*%sqrtm(as.matrix(S22))$Binv
+  res1=res1%*%pracma::sqrtm(as.matrix(S11))$Binv
+  res2=res2%*%pracma::sqrtm(as.matrix(S22))$Binv
 
   dd=NULL
   for (i in 1:dim(res1)[2]) {
