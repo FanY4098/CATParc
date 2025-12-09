@@ -1,4 +1,4 @@
-Package: ParcorTest
+Package: CATParc
 Type: Package
 Title: Model-Free Inference for Characterizing Protein Mutations through a Co-evolutionary Lens
 Version: 0.1.0
