@@ -58,7 +58,7 @@ This note is intended to facilitate reproducibility of the results reported in S
 
 For illustration purposes, we use PF01037 as an example. The working directory is assumed to be ./ and should be adjusted accordingly when running the commands. Output files are saved with names ending in result.txt or result.csv.
 
-PSICOV
+## PSICOV
 
 PSICOV can be installed from the official GitHub repository at https://github.com/psipred/psicov. After installation, run the following command in the terminal to obtain the scores for each pair of positions:
 
@@ -66,7 +66,7 @@ PSICOV can be installed from the official GitHub repository at https://github.co
 ./psicov -d 0.03 -j 1 -g 1 -l PF01037.txt > PF01037.psicov.result.txt
 ```
 
-GREMLIN
+## GREMLIN
 
 GREMLIN can be installed from the official GitHub repository at https://github.com/sokrypton/GREMLIN/tree/master. After installation, run the following command in MATLAB to obtain the scores for each pair of positions.
 
@@ -74,7 +74,7 @@ GREMLIN can be installed from the official GitHub repository at https://github.c
 gremlin(‘./PF01037.txt’, ‘./PF01037.gremlin.result.txt’, 'apc', 0, ‘reweight’, 0)
 ```
 
-plmDCA
+## plmDCA
 
 plmDCA can be installed from the GitHub repository at https://github.com/debbiemarkslab/plmc. The current pipeline does not directly output coupling scores without APC correction. Therefore, we first save the estimated model parameters and then manually compute the coupling scores for each pair of positions.
 
@@ -107,7 +107,7 @@ end
 writematrix(results, ‘./PF01037.plmdca.result.txt', 'Delimiter', 'tab')
 ```
 
-mfDCA
+## mfDCA
 
 mfDCA can be installed from the GitHub repository at https://github.com/utdal/py-mfdca. After installation, run the following Python commands to obtain the desired results.
 
@@ -131,7 +131,7 @@ for i in range(L):
 np.savetxt(‘./PF01037.mfdca.result.csv’,scores, delimiter=",")
 ```
 
-GaussDCA
+## GaussDCA
 
 GaussDCA can be installed from the GitHub repository at https://github.com/carlobaldassi/GaussDCA.matlab. After installation, run the following MATLAB commands to obtain the desired results.
 
