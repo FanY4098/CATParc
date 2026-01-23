@@ -50,7 +50,7 @@ CCA=TestCCA(res1,res2)$pval
 L2=TestLS(res1,res2)$pval_chisq
 SUP=TestLS(res1,res2)$pval_sup
 ```
-After obtaining the test statistics (i.e., coupling scores) for each pair of positions, the AUC can be computed using the corresponding distance file provided in the data/ folder.
+After obtaining the test statistics for each pair of positions, the AUC can be computed using the corresponding distance file provided in the data/ folder.
 
 # Implementation of Competing Methods
 
