@@ -118,7 +118,7 @@ import time
 
 
 
-pf = dca('/Users/fan/Documents/PITT/#Research_Pitt/Protein Project/plmc-master/bin/PF01037.fasta’)
+pf = dca('./PF01037.fasta’)
 pf.mean_field(theta=1)  # disable reweighting
 
 L = pf.couplings.shape[0]         # number of positions
